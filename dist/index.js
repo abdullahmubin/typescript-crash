@@ -42,3 +42,15 @@ var DirectionString;
     DirectionString["Down"] = "Down";
 })(DirectionString || (DirectionString = {}));
 console.log('direction string: ' + DirectionString.Up);
+let human = {
+    id: 1,
+    Name: 'Mubin'
+};
+console.log('ojbect');
+console.log(human);
+// Type assertion
+let cId = "mubin";
+let assertionOne = cId;
+console.log('assertionOne: ' + assertionOne);
+let assertionTwo = cId;
+console.log('assertionTwo: ' + assertionTwo);

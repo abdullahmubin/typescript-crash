@@ -66,3 +66,46 @@ let human: user = {
 
 console.log('ojbect');
 console.log(human)
+
+// Type assertion
+
+let cId: any = 123;
+let assertionOne = <number> cId;
+console.log('assertionOne: '+ assertionOne);
+
+let assertionTwo = cId as number;
+console.log('assertionTwo: '+ assertionTwo)
+
+// Functions
+// return type number
+function addNum (x: number, y: number): number {
+    return x + y;
+}
+
+// return type void
+function log(message: string | number): void {
+    console.log(message)
+}
+
+// Interface
+
+interface userInterface {
+    readonly id: number,
+    name: string
+}
+
+const user1: userInterface = {
+    id: 1,
+    name: 'mubin'
+}
+
+type Point = number | string // we can't use interface in this situation.
+const p1: Point = 1;
+
+// interface with function
+
+interface mathFuncInterface {
+    (x: number, y: number): number
+}
+const add: mathFuncInterface = (x: number, y: number): number => x +y;
+const sub: mathFuncInterface = (x: number, y: number): number => x - y;
