@@ -49,8 +49,69 @@ let human = {
 console.log('ojbect');
 console.log(human);
 // Type assertion
-let cId = "mubin";
+let cId = 123;
 let assertionOne = cId;
 console.log('assertionOne: ' + assertionOne);
 let assertionTwo = cId;
 console.log('assertionTwo: ' + assertionTwo);
+// Functions
+// return type number
+function addNum(x, y) {
+    return x + y;
+}
+// return type void
+function log(message) {
+    console.log(message);
+}
+const user1 = {
+    id: 1,
+    name: 'mubin'
+};
+const p1 = 1;
+const add = (x, y) => x + y;
+const sub = (x, y) => x - y;
+// classes
+class Person {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    register() {
+        return `${this.id} of name: ${this.name}`;
+    }
+}
+const mubin = new Person(1, 'Mubin');
+console.log(mubin.register());
+const galib = new Person(2, "Galib");
+console.log(galib.register());
+console.log('mubin');
+console.log(mubin);
+console.log(galib);
+class PersonFn {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    register() {
+        return `${this.id} of name: ${this.name}`;
+    }
+}
+// subclass
+class Employee extends PersonFn {
+    constructor(id, name, position) {
+        super(id, name); // it assign value to PersonFn function constructor
+        this.position = position;
+    }
+}
+const emp = new Employee(1, 'employee name', 'junior dev');
+console.log('emp em,p');
+console.log(emp.name);
+console.log(emp.register());
+// Generics
+function getArray(items) {
+    return new Array().concat(items);
+}
+let numArray = getArray([1, 2, 3]);
+let strArray = getArray(['Test 1', 'Test 2']);
+console.log('numArray');
+console.log(numArray);
