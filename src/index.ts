@@ -21,3 +21,33 @@ employee = [
 ]
 
 console.log('employee: ', employee)
+
+// Union
+
+let pId: string | number;
+pId = '222';
+
+enum Direction1 {
+    Up,
+    Down,
+    Left,
+    Right
+}
+
+enum Direction2 {
+    Up = 1,
+    Down,
+    Left,
+    Right
+}
+
+console.log('enum direction: '+ Direction1.Up);
+console.log('enum direction2: '+ Direction2.Up);
+
+enum DirectionString {
+    Up = 'Up',
+    Down = 'Down'
+
+}
+
+console.log('direction string: '+ DirectionString.Up)
