@@ -51,3 +51,18 @@ enum DirectionString {
 }
 
 console.log('direction string: '+ DirectionString.Up)
+
+// Object
+
+type user = {
+    id: number,
+    Name: string
+}
+
+let human: user = {
+    id: 1,
+    Name: 'Mubin'
+}
+
+console.log('ojbect');
+console.log(human)
